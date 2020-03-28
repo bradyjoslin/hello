@@ -3,74 +3,68 @@
   import Portrait from "./Portrait.svelte";
   import Bio from "./Bio.svelte";
   import Links from "./Links.svelte";
+
+  let greeting = "Hello!";
+  let identify = "I am Brady.";
+  let image_url = "./static/images/portrait.jpg";
 </script>
 
 <style>
   :global(body) {
     color: #eee;
-    background-color: #6200ee;
+    background-color: #424bb2;
     font-family: "Roboto", "Helvetica Neue", "Segoe UI", Helvetica, Arial,
       sans-serif;
-    font-size: 16px;
-    overflow-y: auto;
-  }
-
-  .column {
-    flex: 1;
   }
 
   main {
     display: flex;
-    margin-top: 20vh;
+    vertical-align: middle;
+    margin-top: 15%;
   }
 
-  main .right {
-    margin-right: 2rem;
+  main > div {
+    flex: 50%;
   }
 
-  @media screen and (max-width: 992px) {
+  main .left {
+    text-align: center;
+    flex: 45%;
+  }
+
+  main :global(a) {
+    color: #eee;
+  }
+
+  main :global(a:hover) {
+    color: #b2a842;
+  }
+
+  @media screen and (max-width: 800px) {
     main {
       flex-direction: column;
-      margin: 0;
-    }
-
-    main .column.left {
-      text-align: center;
-    }
-
-    main .portrait {
-      margin: 0;
-    }
-
-    main .footer {
-      margin: 0;
-    }
-  }
-
-  main .footer {
-    display: flex;
-    margin-top: 1rem;
-    font-size: 1.5rem;
-  }
-
-  @media screen and (max-width: 992px) {
-    main .footer {
-      flex-direction: column;
+      margin-top: 10%;
     }
   }
 </style>
 
 <main>
-  <div class="column left">
-    <span class="portrait">
-      <Portrait />
-    </span>
+  <div class="left">
+    <Portrait {image_url} />
   </div>
-  <div class="column right">
-    <Salutation />
-    <Bio />
-    <div class="footer">
-      <Links />
-    </div>
+  <div>
+    <Salutation {greeting} {identify} />
+    <Bio>
+      Developer currently learning
+      <a href="https://www.rust-lang.org/">Rust</a>
+      and
+      <a href="https://svelte.dev/">Svelte.</a>
+      Enjoy exploring
+      <a href="https://fs.blog/mental-models/">mental models</a>
+      and ways to
+      <a href="https://www.youtube.com/watch?v=Tfrrubw7pcE">embrace reality.</a>
+      Working as a Director of Application Services while living in Houston, TX.
+    </Bio>
+    <Links />
   </div>
 </main>

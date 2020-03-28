@@ -2,6 +2,8 @@
 
 This is a personal "hello" page for [bradyjoslin.com](https://bradyjoslin.com) built with [Svelte](https://svelte.dev). It lives at [https://github.com/bradyjoslin/hello](https://github.com/bradyjoslin/hello).
 
+Inspired by [janbaudisch/zola-hallo](https://github.com/janbaudisch/zola-hallo).
+
 ## Get started
 
 Install the dependencies...

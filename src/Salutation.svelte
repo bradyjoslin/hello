@@ -1,6 +1,6 @@
 <script>
-  let salutation = "Hello!";
-  let greeting = "I am Brady.";
+  export let greeting = "";
+  export let identify = "";
 </script>
 
 <style>
@@ -14,7 +14,7 @@
     font-weight: normal;
   }
 
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 800px) {
     h1 {
       font-size: 15vw;
       margin-bottom: 1.5rem;
@@ -26,5 +26,5 @@
   }
 </style>
 
-<h1>{salutation}</h1>
-<h2>{greeting}</h2>
+<h1>{greeting}</h1>
+<h2>{identify}</h2>

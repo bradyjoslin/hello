@@ -10,12 +10,7 @@
 
 <style>
   a {
-    color: #eee;
     margin: 0.25rem;
-  }
-
-  a:hover {
-    color: #333;
   }
 </style>
 
