@@ -44,8 +44,4 @@ wrangler preview --watch
 
 To publish:
 
-```bash
-wrangler publish
-```
-
-TODO: Setup GitHub action for deployment.
+Push to the master branch of this repo which will trigger a Github Action to publish using [Wrangler Action](https://github.com/cloudflare/wrangler-action).
