@@ -11,6 +11,7 @@
 <style>
   a {
     margin: 0.25rem;
+    text-decoration: none;
   }
 </style>
 

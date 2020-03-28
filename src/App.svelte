@@ -34,12 +34,14 @@
 
   main :global(a) {
     color: #eee;
-    text-decoration: none;
   }
 
   main :global(a:hover) {
     color: #b2a842;
-    text-decoration: none;
+  }
+
+  main a {
+    text-decoration: underline;
   }
 
   @media screen and (max-width: 800px) {
