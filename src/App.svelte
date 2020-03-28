@@ -20,7 +20,7 @@
   main {
     display: flex;
     vertical-align: middle;
-    margin-top: 15%;
+    margin-top: 10%;
   }
 
   main > div {
