@@ -34,23 +34,18 @@ You can run the newly built app with `npm run start`. This uses [sirv](https://g
 
 By default, sirv will only respond to requests that match files in `public`. This is to maximise compatibility with static fileservers, allowing you to deploy your app anywhere.
 
-## Deploying to the web
+## Deploying to the Cloudflare Workers
 
-### TODO: Document deploying as a Cloudflare Worker Site
-
-### With [now](https://zeit.co/now)
-
-Install `now` if you haven't already:
+To preview:
 
 ```bash
-npm install -g now
+wrangler preview --watch
 ```
 
-Then, from within your project folder:
+To publish:
 
 ```bash
-cd public
-now deploy --name my-project
+wrangler publish
 ```
 
-As an alternative, use the [Now desktop client](https://zeit.co/download) and simply drag the unzipped project folder to the taskbar icon.
+TODO: Setup GitHub action for deployment.
