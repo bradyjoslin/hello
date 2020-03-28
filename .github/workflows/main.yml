@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy
     steps:
-      - name: Run
+      - uses: actions/checkout@master
+      - name: Build site
         run: |
           npm install
           npm run build
-      - uses: actions/checkout@master
       - name: Publish
         uses: cloudflare/wrangler-action@1.1.0
         with:
