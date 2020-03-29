@@ -1,9 +1,9 @@
 <script>
   import { github, twitter, linkedin } from "svelte-awesome/icons";
-  import Salutation from "./Salutation.svelte";
-  import Portrait from "./Portrait.svelte";
-  import Bio from "./Bio.svelte";
-  import Links from "./Links.svelte";
+  import Salutation from "./components/Salutation.svelte";
+  import Portrait from "./components/Portrait.svelte";
+  import My_Bio from "./My_Bio.svelte";
+  import Links from "./components/Links.svelte";
 
   let greeting = "Hello!";
   let identify = "I am Brady.";
@@ -49,10 +49,6 @@
     color: #b2a842;
   }
 
-  main a {
-    text-decoration: underline;
-  }
-
   @media screen and (max-width: 800px) {
     main {
       flex-direction: column;
@@ -70,18 +66,7 @@
   </div>
   <div class="right">
     <Salutation {greeting} {identify} />
-    <Bio>
-      Developer currently learning
-      <a href="https://www.rust-lang.org/">Rust</a>
-      and
-      <a href="https://svelte.dev/">Svelte</a>. 
-      Enjoy exploring
-      <a href="https://fs.blog/mental-models/">mental models</a>
-      and ways to
-      <a href="https://www.youtube.com/watch?v=Tfrrubw7pcE">embrace reality</a>. 
-      Working as a Director of Application Services while living in Houston,
-      TX.
-    </Bio>
+    <My_Bio />
     <Links {links} />
   </div>
 </main>
