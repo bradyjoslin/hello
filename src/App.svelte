@@ -29,7 +29,10 @@
 
   main .left {
     text-align: center;
-    flex: 45%;
+  }
+
+  main .right {
+    margin-right: 4rem;
   }
 
   main :global(a) {
@@ -49,6 +52,9 @@
       flex-direction: column;
       margin-top: 10%;
     }
+    main .right {
+      margin-right: 1rem;
+    }
   }
 </style>
 
@@ -56,7 +62,7 @@
   <div class="left">
     <Portrait {image_url} />
   </div>
-  <div>
+  <div class="right">
     <Salutation {greeting} {identify} />
     <Bio>
       Developer currently learning
