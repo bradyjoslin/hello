@@ -1,11 +1,6 @@
 <script>
   import Icon from "svelte-awesome";
-  import { github, twitter, linkedin } from "svelte-awesome/icons";
-  let links = [
-    { name: github, url: "https://github.com/bradyjoslin" },
-    { name: twitter, url: "https://twitter.com/bradyj" },
-    { name: linkedin, url: "https://linkedin.com/in/bradyjoslin" }
-  ];
+  export let links = [];
 </script>
 
 <style>

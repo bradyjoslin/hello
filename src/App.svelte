@@ -1,4 +1,5 @@
 <script>
+  import { github, twitter, linkedin } from "svelte-awesome/icons";
   import Salutation from "./Salutation.svelte";
   import Portrait from "./Portrait.svelte";
   import Bio from "./Bio.svelte";
@@ -7,6 +8,11 @@
   let greeting = "Hello!";
   let identify = "I am Brady.";
   let image_url = "./static/images/portrait.jpg";
+  let links = [
+    { name: github, url: "https://github.com/bradyjoslin" },
+    { name: twitter, url: "https://twitter.com/bradyj" },
+    { name: linkedin, url: "https://linkedin.com/in/bradyjoslin" }
+  ];
 </script>
 
 <style>
@@ -68,13 +74,14 @@
       Developer currently learning
       <a href="https://www.rust-lang.org/">Rust</a>
       and
-      <a href="https://svelte.dev/">Svelte</a>.
+      <a href="https://svelte.dev/">Svelte</a>. 
       Enjoy exploring
       <a href="https://fs.blog/mental-models/">mental models</a>
       and ways to
-      <a href="https://www.youtube.com/watch?v=Tfrrubw7pcE">embrace reality</a>.
-      Working as a Director of Application Services while living in Houston, TX.
+      <a href="https://www.youtube.com/watch?v=Tfrrubw7pcE">embrace reality</a>. 
+      Working as a Director of Application Services while living in Houston,
+      TX.
     </Bio>
-    <Links />
+    <Links {links} />
   </div>
 </main>
